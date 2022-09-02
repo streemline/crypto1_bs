@@ -7,7 +7,7 @@ def parity(x):
     return ("{0:08b}".format(x).count('1') & 1)
 
 uid=raw_input("uid> ")
-fp = file(uid+'_generated.bin','wb')
+fp = file(f'{uid}_generated.bin', 'wb')
 fp.write(uid.decode('hex')+"\x00"*2)
 bits = 0
 pbits = 0

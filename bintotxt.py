@@ -1,6 +1,6 @@
 import sys
 data = file(sys.argv[1], 'rb').read()
-uid = data[0:4]
+uid = data[:4]
 
 def parity(x):
     return ("{0:08b}".format(x).count('1') & 1)
